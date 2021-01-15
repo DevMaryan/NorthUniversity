@@ -1,0 +1,200 @@
+:root{
+    --box-shadow4: 0 20px 20px 0 rgba(28, 81, 196, 0.6);
+    --blue-background-color:#0849A3;
+    --blue2-background-color:#003262;
+}
+.screen{
+    cursor: pointer;
+    width:60%;
+    background-color:#000 !important;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+
+.controls{
+    width:60%;
+    background:#212121;
+    color:#fff;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:10px;
+}
+.controls .btnVideo{
+    border:0;
+    background:transparent;
+    cursor: pointer;
+    border:1px solid #212121;
+}
+
+@keyframes boi{
+    from { color:var(--blue-background-color)}
+    to {color:var(--blue2-background-color)}
+}
+.controls .fa-stop{
+    color:var(--blue-background-color)
+}
+.controls .fa-pause{
+    color:var(--blue-background-color)
+}
+.controls .timestamp{
+    color:#999;
+    margin-left:10px;
+}
+.btnVideo:focus {
+    outline:0;
+}
+
+@media(max-width: 800px){
+    .screen, .controls{
+        width:90%;
+    }
+}
+@media(max-width: 414px){
+    .screen, .controls{
+        width:100%;
+	}
+	#video-player{
+		padding:0;
+	}
+	.screen{
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+	}
+	.controls{
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+}
+.blue{
+    color:var(--blue-background-color)
+}
+/* PROGRESS */
+/* SOURCE: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+
+input[type='range'] {
+	-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+	width: 100%; /* Specific width is required for Firefox. */
+	background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+input[type='range']:focus {
+	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type='range']::-ms-track {
+	width: 100%;
+	cursor: pointer;
+
+	/* Hides the slider so custom styles can be added */
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: 1px solid #000000;
+	height: 16px;
+	width: 16px;
+	border-radius: 3px;
+	background: #ffffff;
+	cursor: pointer;
+	margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type='range']::-moz-range-thumb {
+	/*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+	border: 1px solid #f1f1f1;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #e0e0e0;
+	cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type='range']::-ms-thumb {
+	/*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+	border: 1px solid #999;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #ffffff;
+	cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: var(--blue-background-color);
+	background: linear-gradient(90deg, #0849A3 0%, #0849A3 6%,  #0849A3 100%);
+	border-radius: 1.3px;
+	border: 0.2px solid #666;
+
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+	background: var(--blue-background-color);
+	background: linear-gradient(90deg, #0849A3 0%, #0849A3 6%,  #0849A3 100%);
+	animation: boi 5s infinite;
+}
+
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 5.4px;
+	cursor: pointer;
+	background: var(--blue-background-color);
+	background: linear-gradient(90deg, var(--blue-background-color) 0%, var(--blue-background-color) 6%, var(--blue-background-color) 100%);
+	border-radius: 10px;
+	animation: boi 5s infinite;
+}
+
+
+input[type='range']::-ms-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	border-width: 16px 0;
+	color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+	background: var(--blue-background-color);
+	background: linear-gradient(90deg,#0849A3 0%,#0849A3 6%,#0849A3 100%);
+	border: 0.2px solid #666;
+	border-radius: 2.6px;
+	animation: boi 5s infinite;
+}
+
+input[type='range']:focus::-ms-fill-lower {
+	background: var(--blue-background-color);
+	background: linear-gradient(90deg, #0849A3 0%, #0849A3 6%, #0849A3 100%);
+}
+input[type='range']::-ms-fill-upper {
+	background: var(--blue-background-color);
+	background: linear-gradient(90deg,#0849A3 0%, #0849A3 6%, #0849A3 100%);
+	border: 0.2px solid #666;
+	border-radius: 2.6px;
+	animation: boi 5s infinite;
+}
+
+input[type='range']:focus::-ms-fill-upper {
+	background: var(--blue-background-color);
+	animation: boi 5s infinite;
+}
+@keyframes boi{
+    from { background-color:var(--blue-background-color);}
+    to {background-color:var(--blue-background-color);}
+}

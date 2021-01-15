@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <link href='./css/style.css' rel='stylesheet'>
+    <link href='./css/backend.css' rel='stylesheet'>
+    <link href='./css/musicPlayer.css' rel='stylesheet'>
+    <link href='./css/videoPlayer.css' rel='stylesheet'>
+    <link href='./css/navbarResponsive.css' rel='stylesheet'>
+    <title>University of North</title>
+
+</head>
+
+<body>
+    <!-- Section 1 Header-->
+    <header id='header-container'>
+        <div id='logo-container'>
+            <div class='firstBox'>
+                <p class='logo-slogan'>North</p>
+                <div class='line'></div>
+                <p class='logo-slogan2'>University</p>
+                <div class="secondBox">
+                </div><img class='img-Logo' src='./images/logo.png'>
+            </div>
+        </div>
+        <div id="logo2">
+            <p class='logo-mini-slogan2'>North</p>
+            <div class='line-mini-2'></div>
+            <p class='logo-mini-slogan3'>University</p>
+        </div>
+        <div id="navMenu" class='py px'>
+            <ul>
+                <li class='brd'>Alumni</li>
+                <li class='brd'>Staff</li>
+                <li class='brd'>Faculty</li>
+                <li class='brd'>Students</li>
+                <li class='brd'>About</li>
+                <li><a id='btnSearch' href="#"><i class="fa fa-search searchUpdate"></i></a></li>
+            </ul>
+        </div>
+        <div id="resNav">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+        <!-- Mini navbar -->
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a class='brd' href="#">Alumni</a>
+                <a class='brd' href="#">Staff</a>
+                <a class='brd' href="#">Faculty</a>
+                <a class='brd' href="#">Students</a>
+                <a class='brd' href="#">About</a>
+            </div>
+        </div>
+    </header>
+    <div id="main-container">
+        <!-- Section 2 News and Events -->
+        <div id="news-container">
+            <div class="jumbo-news">
+                <img id = 'jumboImgUrl' class='jumbo-img'
+                    src='https://www.usnews.com/dims4/USNEWS/e836bb8/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fb0%2F5a49fe7ceb6d77f5ad2824c373a297%2Fucf_47862357.jpg'>
+                <h2 id = 'jumboTitle' class='jumbo-title'>Best University</h2>
+                <h4 id = 'jumboDescription' class='jumbo-parag'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, facere!</h4>
+            </div>
+            <div id="events" class='eventBox'>
+                <h3 class='events-title'>Events <i class="far fa-calendar-alt"></i></h3>
+                <div id = 'allEvents' class='all-events'>
+                    <!-- <div id='event' class='event'>
+                        <div class='event-date'>
+                            <h4 class='date-helper'>09</h4>
+                            <div class='event-line'></div>
+                            <h4 class = 'date-month'>May</h4>
+                        </div>
+                        <div class = 'paragrah'><p id = 'eventDesc' class='event-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dicta.</p></div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="feedback">
+        <p id = 'sendShow'><i class="fas fa-caret-square-down"></i></p>
+        <div id = 'sendFB'>
+            <label for = 'theTitle'>Subject</label>
+            <input type = 'text' id = 'fbTitle' name = 'theTitle'>
+            <label for = 'theMsg'>Message</label>
+            <textarea type = 'text' id = 'fbMsg' name = 'theMsg'></textarea>
+            <button id = 'btnfb'><i class="fas fa-rocket"></i>&nbsp;Send</button>
+       </div>
+    </div>
+    <div id="four-mini-news" class='mini-news'>
+        <!-- <div id = 'box' class="box">
+            <img id = 'boxImg' class='box-img' src="./images/undraw_creative_experiment_8dk3.svg">
+            <h3 id = 'boxTitle' class='box-title'>AI with Python <span id = 'like' ><i class="fas fa-heart"></i><span id = 'likesCounter'>0</span></span></h3> 
+            <h4 id = 'boxDesc' class='box-intro'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, temporibus?</h4>
+            <p class='box-arror underline'>Read more<i class="fas fa-arrow-circle-right box-arror"></i></p>
+        </div> -->
+        <!-- <div class="box">
+            <img class='box-img' src="./images/undraw_environmental_study_skau.svg">
+            <h3 class='box-title'>Complex Algorithms</h3>
+            <h4 class='box-intro'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, temporibus?</h4>
+            <p class='box-arror underline'>Read more<i class="fas fa-arrow-circle-right box-arror"></i></p>
+        </div>
+        <div class="box">
+            <img class='box-img' src="./images/undraw_science_fqhl.svg">
+            <h3 class='box-title'>Science Improvements</h3>
+            <h4 class='box-intro'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, temporibus?</h4>
+            <p class='box-arror underline'>Read more<i class="fas fa-arrow-circle-right box-arror"></i></p>
+        </div>
+        <div class="box">
+            <img class='box-img' src='./images/undraw_teaching_f1cm.svg'>
+            <h3 class='box-title'>Science & Technology</h3>
+            <h4 class='box-intro'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, temporibus?</h4>
+            <p class='box-arror underline'>Read more<i class="fas fa-arrow-circle-right box-arror"></i></p>
+        </div> -->
+    </div>
+    <!-- Inserted Section Video Promotion-->
+    <div id='video-player'>
+        <video src='./video/NorthLogo.mp4' id='video' class='screen' poster='./images/poster.png'></video>
+        <div class="controls">
+            <button class="btnVideo" id="playVideo"><i class="fa fa-play blue px fa-2x">&nbsp; </i></button>
+            <button class="btnVideo" id="stopVideo"> <i class="fa fa-stop px fa-2x"></i> </button><span
+                class="timestamp" id="timestamp">00:00&nbsp;</span>
+            <input type="range" id='progressVideo' class='progressVideo' min='0' max='100' step='0.1' value='0'><span
+                class="timestamp" id="timestampStart"> 00:00</span>
+        </div>
+    </div>
+
+    <!-- Section 3 About University -->
+    <div id='about'>
+        <h1>About North University</h1>
+        <p>A place for learning, discovery, innovation, expression</p>
+        <div class="statistics">
+            <div class="box1">
+                <p>Opened in</p>
+                <h4>2021</h4>
+            </div>
+            <div class="box1">
+                <p>Students</p>
+                <h4 class='numberOfStudents'>117786</h4>
+            </div>
+            <div class="box1">
+                <p>Staff</p>
+                <h4>1421</h4>
+            </div>
+        </div>
+        <button class='btn'>More About North</button>
+    </div>
+    <!-- Section 4 Toggle 3 links -->
+    <div id="toggle-bar">
+        <div class="the-menu">
+            <button id='defaultTab' class='tablinks' onclick="openTab(event, 'Art')">Research</button>
+            <button class='tablinks' onclick="openTab(event, 'Labs')">Laboratories</button>
+            <button class='tablinks' onclick="openTab(event, 'Campus')">Campus Life</button>
+        </div>
+    </div>
+    <div id='Art' class='research'>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/1.jpeg'>
+            <h3>First AI robot</h3>
+        </div>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/2.jpeg'>
+            <h3>Edge of Science</h3>
+        </div>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/3.jpeg'>
+            <h3>Visionary Technology</h3>
+        </div>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/4.jpeg'>
+            <h3>Quantum physics</h3>
+        </div>
+    </div>
+    <div id='Labs' class='research'>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/Lab_1.jpeg'>
+            <h3>Newest Technology</h3>
+        </div>
+
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/Lab_2.jpeg'>
+            <h3>Hi-Tech Equipment</h3>
+        </div>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/Lab_3.jpeg'>
+            <h3>Nested Algorithms</h3>
+        </div>
+    </div>
+    <div id='Campus' class='research'>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/campus_1.jpeg'>
+            <h3>Directions and Campus Map</h3>
+        </div>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/campus_2.jpeg'>
+            <h3>Smart Campus</h3>
+        </div>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/campus_3.png'>
+            <h3>iCloud</h3>
+        </div>
+        <div class="research-box">
+            <img class='research-img' src='./images/section4/campus_4.jpeg'>
+            <h3>Fastest Internet</h3>
+        </div>
+    </div>
+
+    <!-- Section 5 GPA and Student Admission-->
+    <div id='student-gpa-admission'>
+        <div id="gpa">
+            <div>
+                <div class = 'inputsGrades'>
+                    <div class = 'flx2 my hdr'> 
+                        <h3>Course Name</h3>
+                        <h3>Credits</h3>
+                    </div>
+                    <div class = 'flx2 my inSpace'> 
+                        <input type='text' id='courseName1'>
+                        <input name = 'value' type='number' id='courseGrade1' min='0' max='5'>
+                        <i id = 'firstField' class="fas fa-plus-circle green"></i>
+                    </div>
+                    <div id = 'theSecond' class = 'flx2 my inSpace hide'> 
+                        <input type='text' id='courseName2'></td>
+                        <input name = 'value' type='number' id='courseGrade2' min='0' max='5'>
+                        <i id = 'secondField' class="fas fa-plus-circle green "></i>
+                    </div>
+                    <div id = 'theThird' class = 'flx2 my inSpace hide'> 
+                        <input type='text' id='courseName3'>
+                        <input name = 'value' type='number' id='courseGrade3' min='0' max='5'>
+                        <i id = 'thirdField' class="fas fa-plus-circle green "></i>
+                    </div>
+                    <div id = 'theFourth' class = 'flx2 my inSpace hide'> 
+                        <input type='text' id='courseName4'></td>
+                        <input name = 'value' type='number' id='courseGrade4' min='0' max='5'>
+                        <i id = 'fourthField' class="fas fa-plus-circle green "></i>
+                    </div>
+                    <div id = 'theFifth' class = 'flx2 my inSpace hide'> 
+                        <input type='text' id='courseName5'></td>
+                        <input name = 'value' type='number' id='courseGrade5' min='0' max='5'>
+                        <i id = 'fifthField' class="fas fa-plus-circle green "></i>
+                    </div>
+                </div>
+            </div>
+            <button id='btn-gpa-calculate'>Calculate</button>
+            <h4 id = 'criteriaOk' class = 'hide green'>Candidate fulfills the criteria</h4>
+            <h4 id = 'criteriaNot' class = 'hide red'>Candidate does NOT fulfills the criteria</h4>
+        </div>
+        <div id="admission-banner">
+            <div class="admission-content">
+                <h1>Study today</h1>
+                <h3>#<span class="txt-type" data-wait="1000"
+                        data-words='["Front-End Development","Back-End Development"]'></span></h3>
+                <h1>tomorrow Become </h1>
+                <h3>Full-Stuck Developer</h3>
+            </div>
+        </div>
+        <div id="admission-application">
+            <table id='theTable'>
+                <tr>
+                    <td>Name</td>
+                    <td>Surname</td>
+                    <td>Email</td>
+                </tr>
+
+                <tr>
+                    <td><input type='text' id='userName' class='userName'></td>
+                    <td><input type='text' id='userSurname' class='userSurname'></td>
+                    <td><input type='email' id='userEmail' class='userEmail'></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>City</td>
+                    <td>Country</td>
+                </tr>
+                <tr>
+                    <td><input type='text' id='userAddress' class='userAddress'></td>
+                    <td><input type='text' id='userCity' class='userCity'></td>
+                    <td><select id="userCountry" name="userCountry">
+                            <option value="Afganistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="American Samoa">American Samoa</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Anguilla">Anguilla</option>
+                            <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Aruba">Aruba</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bermuda">Bermuda</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bonaire">Bonaire</option>
+                            <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Canary Islands">Canary Islands</option>
+                            <option value="Cape Verde">Cape Verde</option>
+                            <option value="Cayman Islands">Cayman Islands</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Channel Islands">Channel Islands</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Christmas Island">Christmas Island</option>
+                            <option value="Cocos Island">Cocos Island</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo">Congo</option>
+                            <option value="Cook Islands">Cook Islands</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cote DIvoire">Cote DIvoire</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Curaco">Curacao</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="East Timor">East Timor</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Falkland Islands">Falkland Islands</option>
+                            <option value="Faroe Islands">Faroe Islands</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="French Guiana">French Guiana</option>
+                            <option value="French Polynesia">French Polynesia</option>
+                            <option value="French Southern Ter">French Southern Ter</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Gibraltar">Gibraltar</option>
+                            <option value="Great Britain">Great Britain</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Greenland">Greenland</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guadeloupe">Guadeloupe</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="India">India</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Isle of Man">Isle of Man</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Korea North">Korea North</option>
+                            <option value="Korea Sout">Korea South</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Macau">Macau</option>
+                            <option value="Macedonia" selected="selected">Macedonia</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Martinique">Martinique</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mayotte">Mayotte</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Midway Islands">Midway Islands</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Nambia">Nambia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherland Antilles">Netherland Antilles</option>
+                            <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                            <option value="Nevis">Nevis</option>
+                            <option value="New Caledonia">New Caledonia</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Niue">Niue</option>
+                            <option value="Norfolk Island">Norfolk Island</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau Island">Palau Island</option>
+                            <option value="Palestine">Palestine</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Phillipines">Philippines</option>
+                            <option value="Pitcairn Island">Pitcairn Island</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Republic of Montenegro">Republic of Montenegro</option>
+                            <option value="Republic of Serbia">Republic of Serbia</option>
+                            <option value="Reunion">Reunion</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="St Barthelemy">St Barthelemy</option>
+                            <option value="St Eustatius">St Eustatius</option>
+                            <option value="St Helena">St Helena</option>
+                            <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                            <option value="St Lucia">St Lucia</option>
+                            <option value="St Maarten">St Maarten</option>
+                            <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                            <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                            <option value="Saipan">Saipan</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="Samoa American">Samoa American</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Swaziland">Swaziland</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Tahiti">Tahiti</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tokelau">Tokelau</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Erimates">United Arab Emirates</option>
+                            <option value="United States of America">United States of America</option>
+                            <option value="Uraguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Vatican City State">Vatican City State</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                            <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                            <option value="Wake Island">Wake Island</option>
+                            <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zaire">Zaire</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Zip Code</td>
+                    <td>Phone number</td>
+                </tr>
+                <tr>
+                    <td><input type='text' id='zipC'></td>
+                    <td><input type='text' id='phone'></td>
+                </tr>
+            </table>
+            <button id='btnSubmitStudent'>Submit</button><span id = 'infoSubmitted'>Successfully submitted</span>
+        </div>
+
+    </div>
+    <!-- Section 6 Faculties,  Admission, Resources, Staff-->
+    <div id="bgS">
+    <div id="section6">
+        <div class="sectionBox">
+            <h3>Faculties</h3>
+            <div class='sideContent'>
+
+                <ul>
+                    <li><i class="fas fa-arrow-circle-right"></i> Network Security</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Web Development</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Machine Learning</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Computer Science and Engineering</li>
+                </ul>
+                <img class='sideImg' src='./images/undraw_decide_3iwx.svg'>
+            </div>
+        </div>
+        <div class="sectionBox">
+            <h3>Admission</h3>
+            <div class='sideContent'>
+                <ul>
+                    <li><i class="fas fa-arrow-circle-right"></i> Required documents</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Undergraduate</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Graduate</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Financial Aid</li>
+                </ul>
+                <img class='sideImg2' src='./images/undraw_task_31wc.svg'>
+            </div>
+        </div>
+        <div class="sectionBox">
+            <h3>Resources</h3>
+            <div class='sideContent'>
+                <ul>
+                    <li><i class="fas fa-arrow-circle-right"></i> Requirements</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Campus Map</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Visitors</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> A-Z Index</li>
+                </ul>
+                <img class='sideImg' src='./images/undraw_data_extraction_ih3n.svg'>
+            </div>
+        </div>
+    </div>
+    <div class="section6">
+        <div class="sectionBox">
+            <h3>Staff</h3>
+            <div class='sideContent'>
+                <ul>
+                    <li><i class="fas fa-arrow-circle-right"></i> Professors</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Administration</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Rectorate</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> IT Service</li>
+                </ul>
+                <img class='sideImg' src='./images/undraw_professor_8lrt.svg'>
+            </div>
+        </div>
+        <div class="sectionBox">
+            <h3>Research</h3>
+            <div class='sideContent'>
+                <ul>
+                    <li><i class="fas fa-arrow-circle-right"></i> Overview</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Libraries</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Publications</li>
+                    <li><i class="fas fa-arrow-circle-right"></i> Research program</li>
+                </ul>
+                <img class='sideImg2' src='./images/undraw_researching_22gp.svg'>
+            </div>
+        </div>
+    </div>
+    <div id='newsletter'>
+        <div class="flx">
+            <h2>Get the latest news delivered to your inbox.</h2>
+        </div>
+        <div class = 'flx py'>
+            <input type='email' id = 'inputNl' required>
+            <button id='btn_newsletter' class='btn-newsletter'>&nbsp;&nbsp;Subscribe&nbsp;&nbsp;</button>
+        </div>
+        <div class = 'flx height'>
+            <p id = 'msg'></p>
+        </div>
+    </div>
+
+    </div>
+    <!-- Section 7 Footer-->
+    <div id="section7">
+        <div class="footer-left">
+            <div class='footer-logo'><img src='./images/logo.png'></div>
+            <div>
+                <i class="fab fa-facebook-f social-icons"></i>
+                <i class="fab fa-instagram social-icons"></i>
+                <i class="fab fa-twitter social-icons"></i>
+            </div>
+
+        </div>
+        <div class="admin-panel">
+            <h3 id = 'loginToggle' class='txtStyle2'>Login <i class="fas fa-arrow-circle-down"></i></h3>
+            <div id = 'showLogin'>
+                <div class='usernameDiv'>
+                    <span>@</span>
+                    <input type='text' id='username' name='username'>
+                </div>
+                <br>
+                <div class='usernameDiv'>
+                    <span><i class="fas fa-key"></i></span>
+                    <input type='password' id='password' name='password'>
+                </div>
+                <br>
+                <div id = 'chkbx'>
+
+                    <label class="container"> <p>Show password</p>
+                        <input id = 'chkbox' type="checkbox" onclick="showPassword()">
+                        <span class="checkmark"></span>
+                      </label>
+                </div>
+                <br>
+                <button id = 'btnLogin' class='btnLogin'>Login</button>
+            </div>
+        </div>
+        <div class="radio-panel">
+
+            <div class="music-container" id="music-container">
+                <div class="music-info">
+                    <h4 id="title"></h4>
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress" id="progress">
+
+                        </div>
+                    </div>
+                </div>
+                <audio src="./music/Slatkaristika-Da_POLETAM.mp3" id="audio"></audio>
+
+                <div class="navigation">
+                    <button id="prev" class="action-btn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+                    <button id="play" class="action-btn action-btn-big">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="next" class="action-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+                <div class="img-container">
+                    <img src="./Images/slatkaristika.jpeg" alt="music-cover" id="cover">
+                </div>
+            </div>
+        </div>
+                    <!-- Messenger -->
+    <div id = 'messenger'>
+        <div id = 'iconShow'><i class="fab fa-rocketchat"></i></div>
+        <div id = 'messengerContainer' class = 'hide'>
+            <div id="msgStff">
+                <div id = 'msgTitle'>
+                    <h5><i class="far fa-question-circle"></i> Help Desk</h5>
+                    <span id = 'closeMsg'></span>
+                </div>
+                <div id = 'aIContainer'>
+                    <div id="messengerContent"></div>
+                </div>
+                <div id = 'messengerSend'>
+                    <input type = 'text' id = 'theMsg'>
+                    <button id = 'sendMsg'><i class="far fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- Section 8 -->
+    <div id="section8">
+        <div id = 'weather'>
+            <div id = 'weatherCity'></div>
+            <div id = 'weatherTemp'></div>
+            <div class="flex">
+                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                <div class="description"></div>
+              </div>
+            <div id = 'weatherDesc'></div>
+            <div id = 'weatherHumi'></div>
+            <div id = 'weatherSpd'></div>
+        </div>
+        <div id = 'copyrights'><p> © 2021 Copyright North University.</p></div>
+    </div>
+    <!-- Section 9 Search-->
+    <div id="search">
+        <div id='search-form'>
+            <div class="theForm">
+                <input type="text" id="inputSearch" onkeyup="searchDiv()" placeholder="Please enter a search term.."
+                    name="search" title="Type in a name">
+                <button onclick="searchDiv()" class='lupa'><i class="fa fa-search"></i></button>
+            </div>
+
+            <div id="posts-container">
+                <div class="target">
+                    <div class="number">1</div>
+                    <div class="post-info">
+                        <h2 class="post-title">Required documents</h2>
+                        <p class="post-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In repudiandae dolores praesentium
+                            cupiditate aperiam distinctio animi delectus tempore impedit fugiat?
+                        </p>
+                        <a href='#'>Read more...</a>
+                    </div>
+                </div>
+                <div class="target">
+                    <div class="number">2</div>
+                    <div class="post-info">
+                        <h2 class="post-title">Student questions</h2>
+                        <p class="post-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In repudiandae dolores praesentium
+                            cupiditate aperiam distinctio animi delectus tempore impedit fugiat?
+                        </p>
+                        <a href='#'>Read more...</a>
+                    </div>
+                </div>
+                <div class="target">
+                    <div class="number">3</div>
+                    <div class="post-info">
+                        <h2 class="post-title">Admission</h2>
+                        <p class="post-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In repudiandae dolores praesentium
+                            cupiditate aperiam distinctio animi delectus tempore impedit fugiat?
+                        </p>
+                        <a href='#'>Read more...</a>
+                    </div>
+                </div>
+                <div class="target">
+                    <div class="number">4</div>
+                    <div class="post-info">
+                        <h2 class="post-title">Campus directions</h2>
+                        <p class="post-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In repudiandae dolores praesentium
+                            cupiditate aperiam distinctio animi delectus tempore impedit fugiat?
+                        </p>
+                        <a href='#'>Read more...</a>
+                    </div>
+                </div>
+                <div class="target">
+                    <div class="number">5</div>
+                    <div class="post-info">
+                        <h2 class="post-title">Admission fee</h2>
+                        <p class="post-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In repudiandae dolores praesentium
+                            cupiditate aperiam distinctio animi delectus tempore impedit fugiat?
+                        </p>
+                        <a href='#'>Read more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Back-End -->
+    <div id="backend">
+        <div id="backend-content">
+            <div class="left-panel">
+                <div class='logout'>
+                    <img src='./images/profile-trans.jpg'>
+                    <p>Admin Panel</p>
+                    <h4 id = 'logout'><i class="fas fa-sign-out-alt"></i> Logout</h4>
+                </div>
+                <div class = 'the-backEnd-menu'>
+                    <ul>
+                        <li id = 'defaultBackEndTab' class = 'backEndLinks' onclick="openBackEndTab(event, 'Overview')">Dashboard</li>
+                        <li class = 'backEndLinks' onclick="openBackEndTab(event, 'MainNews')">Main News</li>
+                        <li class = 'backEndLinks' onclick="openBackEndTab(event, 'MiniNews')">Mini News</li>
+                        <li class = 'backEndLinks' onclick="openBackEndTab(event, 'Events')">Events</li>
+                        <li class = 'backEndLinks' onclick="openBackEndTab(event, 'NewStudents')">New Students</li>
+                        <li class = 'backEndLinks' onclick="openBackEndTab(event, 'Newsletter')">Newsletter</li>
+                        <li class = 'backEndLinks' onclick="openBackEndTab(event, 'Feedback')">Feedback</li>
+                    </ul>
+                </div>
+                <div id =  'extraOp'>
+                    <div id = 'themes'>
+                        <i id = 'pickTheme' class="fas fa-cogs"></i>
+                        <div id = 'chooseColor'>
+                            <div id="theColors">
+                                <div id="clr1"></div>
+                                <div id="clr2"></div>
+                                <div id="clr3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = 'weathers'>
+                        <i id = 'pickCity' class="fas fa-cloud-sun-rain"></i>
+                        <select id = 'selectCity'>
+                            <option value = 'ohrid'>Ohrid</option>
+                            <option value = 'skopje'>Skopje</option>
+                            <option value = 'bitola'>Bitola</option>
+                            <option value = 'strumica'>Strumica</option>
+                            <option value = 'Veles'>Veles</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div id='Overview' class='backEndContent'>
+                    <div class="research-box">
+                        <h3>Dashboard</h3>
+                        <table id = 'overviewTable'>
+                            <tr>
+                                <th>Main News</th>
+                                <th>Mini News</td>
+                                <th>Events</th>
+                                <th>New Students</th>
+                                <th>Newsletters</th>
+                            </tr>
+                            <tr>
+                                <td id = 'mainNewsCounter'></td>
+                                <td id = 'miniNewsCounter'></td>
+                                <td id = 'eventsCounter'></td>
+                                <td id = 'NewStudentCounter'></td>
+                                <td id = 'NewsLettersCounter'></td>
+                            </tr>
+                        </table>
+                        <div id="piechart"></div>
+                    </div>
+                </div>
+                <div id='MainNews' class='backEndContent'>
+                    <div class="research-box">
+                        <div id="createNews">
+                            <table id = 'tableCreateNews'>
+                                <tr>
+                                    <td>Image</td>
+                                    <td><input id = 'news-image' name = 'image' requried></td>
+                                </tr>
+                                <tr>
+                                    <td>Title</td>
+                                    <td><input id = 'news-title' name = 'title' requried></td>
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td><textarea id = 'news-description' name = 'description' maxlength="50"></textarea></td>
+                                </tr>
+                            </table>
+                            <div class = 'something'><button id = 'btnAddNews'>Add</button> </div>
+                        <div id="displayNews">
+                            <table id = tableNews>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Image</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                                <tbody id = 'statisticMN'>
+    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div id='MiniNews' class='backEndContent'>
+                    <div class="research-box">
+                        <div id="createMiniNews">
+                            <table id = 'tableCreateMiniNews'>
+                                <tr>
+                                    <td>Title</td>
+                                    <td><input type = 'text' id = 'miniNewsTitle' name = 'title' requried></td>
+                                </tr>
+                                <tr>
+                                    <td>Image</td>
+                                    <td><input type = 'text'  id = 'miniNewsImage' name = 'image' requried></td>
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td><textarea type = 'text'  id = 'miniNewsDescription' name = 'description' maxlength="50"></textarea></td>
+                                </tr>
+                            </table>
+                            <div class = 'something'><button id = 'btnAddMiniNews'>Add</button> </div>
+                        <div id="displayMiniNews">
+                            <table id = tableMiniNews>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>Image</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                                <tbody id = 'statisticMMN'>
+    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id='Events' class='backEndContent'>
+                    <div class="research-box">
+                        <div id="createEvents">
+                            <table id = 'tableCreateEvents'>
+                                <tr>
+                                    <td>Day</td>
+                                    <td><select id = 'eventDay' name="DOBDay">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Month</td>
+                                    <td><select id="eventMonth" name="month">
+                                        <option value = 'Jan'>January</option>
+                                        <option value = 'Feb'>February</option>
+                                        <option value = 'Mar'>March</option>
+                                        <option value = 'Apr'>April</option>
+                                        <option value = 'May'>May</option>
+                                        <option value = 'Jun'>June</option>
+                                        <option value = 'Jul'>July</option>
+                                        <option value = 'Aug'>August</option>
+                                        <option value = 'Sep'>September</option>
+                                        <option value = 'Oct'>October</option>
+                                        <option value = 'Nov'>November</option>
+                                        <option value = 'Dec'>December</option>
+                                      </select></td>
+                                </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td><textarea id = 'eventDescription' name = 'description' maxlength="50"></textarea></td>
+                                </tr>
+                            </table>
+                            <div class = 'something'><button id = 'btnAddEvent'>Add</button> </div>
+                        <div id="displayEvebts">
+                            <table id = tableevents>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Day</th>
+                                    <th>Month</th>
+                                    <th>Description</th>
+                                    <th>Delete</th>
+                                </tr>
+                                <tbody id = 'statisticEvents'>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id='NewStudents' class='backEndContent'>
+                    <div class="research-box">
+                        <table id = tableNewStudents>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>Country</th>
+                                <th>Zip code</th>
+                                <th>Phone Number</th>
+                                <th>Delete</th>
+                            </tr>
+                            <tbody id = 'statisticNS'>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id='Newsletter' class='backEndContent'>
+                    <div class="research-box">
+                        <table id = 'newsletterTable'>
+                            <tr>
+                                <th>#</th>
+                                <th>Email</th>
+                                <th>Delete</th>
+                            </tr>
+                            <tbody id = 'statisticNL'>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id='Feedback' class='backEndContent'>
+                    <div class="research-box">
+
+                        <div id="displayFeedback">
+                            <h3>Guests Feedback</h3>
+                            <table id = tableFeedback>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                </tr>
+                                <tbody id = 'statisticFeedback'>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                </div>
+                </div>
+            </div>
+            <div id = 'notification' class = 'notification'>
+                <div id = 'notifyHeader'class = 'notify-header'></div>
+                <div id = 'notifyContent' class="notify-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--4172 lines of code-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+    <script src = './js/StatisticsNewsletters.js'></script> <!-- Statistic Newsletters-->
+    <script src='./js/backendTabsNLogout.js'></script>
+    <script src='./js/scrollFunc.js'></script> <!-- Section 1 - Scroll function for header-->
+    <script src='./js/videoPlayer.js'></script> <!-- Section 2 - Video Player-->
+    <script src='./js/treeTabs.js'></script> <!-- Section 4 - Tree Tabs -->
+    <script src='./js/typewriter.js'></script> <!-- Section 5 - Typing -->
+    <script src = './js/admissionToggle.js'></script> <!-- Section 5 - Admission toggle-->
+    <script src='./js/musicPlayer.js'></script> <!-- Section 8 - Music Application -->
+    <script src='./js/searchFunc.js'></script> <!-- Section  - Search Functionality-->
+    <script src = './js/toggleLogin.js'></script> <!-- Section 9 - Login toggle-->
+    <script src = './js/backendLogic.js'></script> <!-- BackEnd Logic-->
+    <script src = './js/StatisticOverviewPieChart.js'></script>
+    <script src = './js/newStudent.js'></script> <!-- Object Student -->
+    <script src = './js/criteriaCalc.js'></script> <!-- Criteria Calculator-->
+    <script src = './js/mainNews.js'></script> <!-- Main News -->
+    <script src = './js/themes.js'></script> <!-- Themes -->
+    <script src = './js/events.js'></script> <!-- Events-->
+    <script src = './js/miniNews.js'></script> <!-- Mini News -->
+    <script src = './js/messenger.js'></script> <!-- Messenger -->
+    <script src = './js/feedback.js'></script> <!-- Feedback -->
+    <script src = './js/weather.js'></script> <!-- Weather -->
+    <script src = './js/topNav.js'></script> <!-- HamburgerMenu -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- JQuery lib-->
+    
+
+</body>
+
+</html>
